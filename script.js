@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.querySelector('.flowers-container');
     const itemTypes = [
-        // Reduce los valores para que sean más pequeños en general, y luego el CSS los ajustará
         { src: 'flores.png', class: 'flower-item', minSize: 40, maxSize: 80, weight: 0.8 }, 
         { src: 'flor-2.png', class: 'butterfly-item', minSize: 40, maxSize: 100, weight: 0.8 } 
     ];
@@ -32,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const startXMax = viewportWidth; 
         itemWrapper.style.left = Math.random() * (startXMax - startXMin) + startXMin + 'px';
 
-        // Aquí se genera el tamaño en JS, que luego CSS puede sobrescribir con Media Queries
         const size = Math.random() * (selectedItem.maxSize - selectedItem.minSize) + selectedItem.minSize;
         itemWrapper.style.width = size + 'px';
         itemWrapper.style.height = size + 'px';
